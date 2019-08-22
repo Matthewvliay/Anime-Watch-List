@@ -1,0 +1,149 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #252525;
+	color: #af0404;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.6rem;
+}
+
+.container {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: grid;
+}
+
+.img-container {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 1;
+}
+.img-container img {
+	margin-right: 2em;
+	width: 100px;
+	height: 100px;
+}
+.header {
+	background: #ff0000;
+	padding: 1.6rem 0;
+	font-family: 'Open Sans', sans-serif;
+	color: #555;
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: bold;
+	text-shadow: #333 1px 1px 0;
+	position: relative;
+	overflow: hidden;
+}
+.header__title {
+	display: inline-block;
+}
+.header__subtitle {
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+	margin: 0 2em;
+	color: #bf1444;
+}
+a:hover {
+	background-color: #ccc;
+}
+.categories-div {
+	text-align: center;
+	margin: auto;
+}
+.watchlist {
+	margin-top: 2em;
+	box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 20%;
+	border: 1px solid grey;
+	float: right;
+}
+.watchlist-header {
+	display: flex;
+	align-items: center;
+	font-size: 30px;
+	justify-content: center;
+}
+
+.watched {
+	border: none;
+	padding: 20px;
+	color: cyan;
+	font-weight: bold;
+	font-size: 1em;
+	text-align: center;
+}
+
+.modal {
+	display: none;
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+}
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+input[type='checkbox'] {
+	margin: 0 5px;
+	display: inline-block;
+	border: 1px solid #000;
+	width: 15px;
+	height: 15px;
+	position: relative;
+}
+.anime-image,
+anime-image:hover {
+	cursor: pointer;
+}
+
+#img {
+	animation-name: flip;
+	animation-duration: 3s;
+	/* animation-iteration-count: infinite; */
+	animation-iteration-count: 2;
+}
+
+@keyframes flip {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-25deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
