@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Anime App</title>
+	</head>
+	<link rel="stylesheet" href="/styles/styles.css" />
+	<link rel="icon" href="/images/favicon.png" />
+	<body>
+		<div class="header">
+			<div class="container">
+				<div class="header__title">Anime List</div>
+				<div class="header__subtitle">
+					What anime are you watching?
+				</div>
+				<div class="img-container">
+					<img
+						id="img"
+						src="https://lh3.googleusercontent.com/PnP1LnqlDwBzJnZAz71MEMmmklzPVRK9GK8VNyaUef6PLrvlY2OTwjLSOT-EoOxnTkM"
+						alt="naruto holding rasengan"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<div class="categories-div">
+			<span class="category" id="anime-category"></span>
+			<span class="category" id="anime-category"></span>
+			<span class="category" id="anime-category"></span>
+		</div>
+		<div class="container">
+			<div id="anime"></div>
+			<form id="search-anime">
+				<input type="text" class="input search" placeholder="search some anime.." name="animetext" />
+				<input type="submit" value="Search" class="search-button" />
+			</form>
+		</div>
+		<div class="modal">
+			<div class="modal-content">
+				<span class="close">times</span>
+				<p>Example text in modal</p>
+			</div>
+		</div>
+
+		<div class="watchlist">
+			<h1 class="watchlist-header">Your watch list:</h1>
+			<div class="watched">Watched:</div>
+		</div>
+
+		<ul class="suggestions"></ul>
+
+		<script src="/scripts/bundle.js"></script>
+	</body>
+</html>

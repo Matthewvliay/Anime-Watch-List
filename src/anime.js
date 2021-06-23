@@ -18,12 +18,12 @@ loadWatched()
 export { getAnimeArr, getWatchedAnime, saveAnime }
 
 
-// const loadInfo = () => {
-//     jikanjs.loadAnime(19815, 'episodes').then((response) => {
-//         response.episodes.forEach(element => {
-//             console.log(`${element.episode_id}: ${element.title} - ${element.title_romanji} - ${element.title_japanese}`);
-//         })
-//     }).catch((err) => {
-//         console.error(err); // in case a error happens
-//     });
-// }
+const loadInfo = () => {
+    jikanjs.loadAnime(19815, 'episodes').then((response) => {
+        response.episodes.forEach(element => {
+            console.log(`${element.episode_id}: ${element.title} - ${element.title_romanji} - ${element.title_japanese}`);
+        })
+    }).catch((err) => {
+        console.error(err); // in case a error happens
+    });
+}

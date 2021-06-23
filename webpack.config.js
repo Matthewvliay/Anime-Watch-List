@@ -21,9 +21,9 @@ module.exports = {
     },
     devServer: {
         contentBase: path.resolve(__dirname, 'public'),
-        publicPath: '/scripts/',
+        publicPath: 'http://localhost:3000',
         watchContentBase: true,
-        port: 9090
+        port: 3000,
     },
     devtool: 'source-map'
 }

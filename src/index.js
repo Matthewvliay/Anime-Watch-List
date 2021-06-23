@@ -20,21 +20,23 @@ function findMatch(wordMatch, anime) {
     })
 }
 
+//anime info for the title
 function renderInfo(title) {
 
 }
 
-function displayMatches() {
-    fetchAnime(this.value) // search ..
+function displayMatches(val) {
+    fetchAnime(val) // search ..
     //if the searchbar is empty
 
-    if (this.value === '') {
+    if (val === '') {
         return
     } else {
-        const matchedAnime = findMatch(this.value, anime)
+        console.log("YOOOOO")
+        const matchedAnime = findMatch(val, anime)
         const html = matchedAnime.slice(0, 10).map(anime => {
-            const regex = new RegExp(this.value, 'gi')
-            const data = anime.title.replace(regex, `<span>${this.value}</span>`)
+            const regex = new RegExp(val, 'gi')
+            const data = anime.title.replace(regex, `<span>${val}</span>`)
 
             return `
             <div>
@@ -103,16 +105,16 @@ const modal = document.querySelector('.modal')
 
 
 const submit = document.getElementById('search-anime')
-e.preventDefault()
+console.log(submit);
 submit.addEventListener('submit', (e) => {
-    console.log(this.value)
-    console.log(this.disabled)
-    this.disabled = true;
-    setTimeout(() => {
-        this.disabled = false
-        console.log(this.disabled)
-    }, 5000)
-    displayMatches()
+    e.preventDefault()
+    // this.disabled = true;
+    console.log("Form has been submitted");
+    // setTimeout(() => {
+    //     // this.disabled = false
+    //     // console.log(this.disabled)
+    // }, 5000)
+    displayMatches(searchInput.value);
 })
 
 
